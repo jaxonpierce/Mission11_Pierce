@@ -1,0 +1,6 @@
+@Mission11_Pierce_HostAddress = http://localhost:5119
+
+GET {{Mission11_Pierce_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
