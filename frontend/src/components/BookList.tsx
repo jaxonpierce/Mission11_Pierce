@@ -8,6 +8,7 @@ interface Book {
   publisher: string;
   isbn: string;
   classification: string;
+  category: string;
   pageCount: number;
   price: number;
 }
@@ -67,6 +68,7 @@ const BookList: React.FC = () => {
             <th>Author</th>
             <th>Publisher</th>
             <th>ISBN</th>
+            <th>Classification</th>
             <th>Category</th>
             <th>Pages</th>
             <th>Price ($)</th>
@@ -80,6 +82,7 @@ const BookList: React.FC = () => {
               <td>{book.publisher}</td>
               <td>{book.isbn}</td>
               <td>{book.classification}</td>
+              <td>{book.category}</td>
               <td>{book.pageCount}</td>
               <td>{book.price.toFixed(2)}</td>
             </tr>

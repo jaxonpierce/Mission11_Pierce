@@ -12,4 +12,5 @@ namespace Mission11_Pierce.Data
 
         public DbSet<Book> Books { get; set; }
     }
+
 }

@@ -23,6 +23,9 @@ namespace Mission11_Pierce.Models
         public string? Classification { get; set; }
 
         [Required]
+        public string? Category { get; set; }
+
+        [Required]
         public int PageCount { get; set; }
 
         [Required]

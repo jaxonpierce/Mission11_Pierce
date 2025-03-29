@@ -36,5 +36,17 @@ namespace Mission11_Pierce.Controllers
 
             return Ok(new { TotalRecords = totalRecords, Books = books });
         }
+
+        [HttpGet("GetBooksByCategory")]
+        public async Task<IActionResult> GetBooksByCategory(string category, int page = 1, int pageSize = 5)
+        {
+            var books = await _context.Books
+                .Where(b => b.Category == category || category == "All") // Include "All" as default
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            return Ok(books);
+        }
     }
 }
