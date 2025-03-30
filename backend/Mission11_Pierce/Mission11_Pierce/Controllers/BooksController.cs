@@ -37,16 +37,22 @@ namespace Mission11_Pierce.Controllers
             return Ok(new { TotalRecords = totalRecords, Books = books });
         }
 
-        [HttpGet("GetBooksByCategory")]
-        public async Task<IActionResult> GetBooksByCategory(string category, int page = 1, int pageSize = 5)
+        [HttpGet("categories")]
+        public async Task<IActionResult> GetCategories()
         {
-            var books = await _context.Books
-                .Where(b => b.Category == category || category == "All") // Include "All" as default
-                .Skip((page - 1) * pageSize)
-                .Take(pageSize)
-                .ToListAsync();
+            try
+            {
+                var categories = await _context.Books
+                    .Select(b => b.Category)  // Assuming 'Category' is a field in your 'Books' table
+                    .Distinct()
+                    .ToListAsync();
 
-            return Ok(books);
+                return Ok(categories);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
         }
     }
 }
