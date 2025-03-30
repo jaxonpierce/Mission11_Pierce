@@ -1,14 +1,16 @@
-import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import BookList from "./components/BookList";
-import "bootstrap/dist/css/bootstrap.min.css";
+import CartPage from "./components/CartPage";
 
-const App: React.FC = () => {
+function App() {
   return (
-    <div className="App">
-      <h1 className="text-center mt-4">Mission 11: Online Bookstore</h1>
-      <BookList />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<BookList />} />
+        <Route path="/cart" element={<CartPage />} />
+      </Routes>
+    </Router>
   );
-};
+}
 
 export default App;

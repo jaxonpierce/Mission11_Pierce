@@ -134,3 +134,4 @@ C:\Users\jaxon\OneDrive\Documents\413\Mission11_Pierce\backend\Mission11_Pierce\
 C:\Users\jaxon\OneDrive\Documents\413\Mission11_Pierce\backend\Mission11_Pierce\Mission11_Pierce\obj\Debug\net8.0\Mission11_Pierce.pdb
 C:\Users\jaxon\OneDrive\Documents\413\Mission11_Pierce\backend\Mission11_Pierce\Mission11_Pierce\obj\Debug\net8.0\Mission11_Pierce.genruntimeconfig.cache
 C:\Users\jaxon\OneDrive\Documents\413\Mission11_Pierce\backend\Mission11_Pierce\Mission11_Pierce\obj\Debug\net8.0\ref\Mission11_Pierce.dll
+C:\Users\jaxon\OneDrive\Documents\413\Mission11_Pierce\backend\Mission11_Pierce\Mission11_Pierce\obj\Debug\net8.0\Mission11_Pierce.sourcelink.json

@@ -17,10 +17,21 @@ namespace Mission11_Pierce.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Book>>> GetBooks([FromQuery] int page = 1, [FromQuery] int pageSize = 5, [FromQuery] string? sortBy = null)
+        public async Task<ActionResult<IEnumerable<Book>>> GetBooks(
+            [FromQuery] int page = 1,
+            [FromQuery] int pageSize = 5,
+            [FromQuery] string? sortBy = null,
+            [FromQuery] string? category = null)  // <-- Add category filter
         {
             var booksQuery = _context.Books.AsQueryable();
 
+            // Apply category filter if selected
+            if (!string.IsNullOrEmpty(category) && category != "All Categories")
+            {
+                booksQuery = booksQuery.Where(b => b.Category == category);
+            }
+
+            // Sorting logic
             if (!string.IsNullOrEmpty(sortBy))
             {
                 booksQuery = sortBy.ToLower() switch
@@ -36,5 +47,18 @@ namespace Mission11_Pierce.Controllers
 
             return Ok(new { TotalRecords = totalRecords, Books = books });
         }
+
+        [HttpGet("categories")]
+        public async Task<ActionResult<IEnumerable<string>>> GetCategories()
+        {
+            var categories = await _context.Books
+                .Select(b => b.Category)
+                .Distinct()
+                .ToListAsync();
+
+            return Ok(categories);
+        }
+
+
     }
 }
