@@ -1,29 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\jaxon\\OneDrive\\Documents\\413\\Mission11_Pierce\\backend\\Mission11_Pierce\\",
+  "WorkspaceRootPath": "C:\\Users\\Jaxon\\OneDrive\\Desktop\\413\\Mission11_Pierce\\backend\\Mission11_Pierce\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C0707543-009F-4098-8219-7440275EAB53}|Mission11_Pierce\\Mission11_Pierce.csproj|c:\\users\\jaxon\\onedrive\\documents\\413\\mission11_pierce\\backend\\mission11_pierce\\mission11_pierce\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C0707543-009F-4098-8219-7440275EAB53}|Mission11_Pierce\\Mission11_Pierce.csproj|c:\\users\\jaxon\\onedrive\\desktop\\413\\mission11_pierce\\backend\\mission11_pierce\\mission11_pierce\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C0707543-009F-4098-8219-7440275EAB53}|Mission11_Pierce\\Mission11_Pierce.csproj|solutionrelative:mission11_pierce\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0707543-009F-4098-8219-7440275EAB53}|Mission11_Pierce\\Mission11_Pierce.csproj|c:\\users\\jaxon\\onedrive\\documents\\413\\mission11_pierce\\backend\\mission11_pierce\\mission11_pierce\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0707543-009F-4098-8219-7440275EAB53}|Mission11_Pierce\\Mission11_Pierce.csproj|solutionrelative:mission11_pierce\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C0707543-009F-4098-8219-7440275EAB53}|Mission11_Pierce\\Mission11_Pierce.csproj|c:\\users\\jaxon\\onedrive\\documents\\413\\mission11_pierce\\backend\\mission11_pierce\\mission11_pierce\\data\\bookdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C0707543-009F-4098-8219-7440275EAB53}|Mission11_Pierce\\Mission11_Pierce.csproj|solutionrelative:mission11_pierce\\data\\bookdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C0707543-009F-4098-8219-7440275EAB53}|Mission11_Pierce\\Mission11_Pierce.csproj|c:\\users\\jaxon\\onedrive\\documents\\413\\mission11_pierce\\backend\\mission11_pierce\\mission11_pierce\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C0707543-009F-4098-8219-7440275EAB53}|Mission11_Pierce\\Mission11_Pierce.csproj|c:\\users\\jaxon\\onedrive\\desktop\\413\\mission11_pierce\\backend\\mission11_pierce\\mission11_pierce\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C0707543-009F-4098-8219-7440275EAB53}|Mission11_Pierce\\Mission11_Pierce.csproj|solutionrelative:mission11_pierce\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0707543-009F-4098-8219-7440275EAB53}|Mission11_Pierce\\Mission11_Pierce.csproj|c:\\users\\jaxon\\onedrive\\documents\\413\\mission11_pierce\\backend\\mission11_pierce\\mission11_pierce\\mission11_pierce.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{C0707543-009F-4098-8219-7440275EAB53}|Mission11_Pierce\\Mission11_Pierce.csproj|c:\\users\\jaxon\\onedrive\\desktop\\413\\mission11_pierce\\backend\\mission11_pierce\\mission11_pierce\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0707543-009F-4098-8219-7440275EAB53}|Mission11_Pierce\\Mission11_Pierce.csproj|solutionrelative:mission11_pierce\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0707543-009F-4098-8219-7440275EAB53}|Mission11_Pierce\\Mission11_Pierce.csproj|c:\\users\\jaxon\\onedrive\\desktop\\413\\mission11_pierce\\backend\\mission11_pierce\\mission11_pierce\\data\\bookdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0707543-009F-4098-8219-7440275EAB53}|Mission11_Pierce\\Mission11_Pierce.csproj|solutionrelative:mission11_pierce\\data\\bookdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0707543-009F-4098-8219-7440275EAB53}|Mission11_Pierce\\Mission11_Pierce.csproj|c:\\users\\jaxon\\onedrive\\desktop\\413\\mission11_pierce\\backend\\mission11_pierce\\mission11_pierce\\adminuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0707543-009F-4098-8219-7440275EAB53}|Mission11_Pierce\\Mission11_Pierce.csproj|solutionrelative:mission11_pierce\\adminuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0707543-009F-4098-8219-7440275EAB53}|Mission11_Pierce\\Mission11_Pierce.csproj|c:\\users\\jaxon\\onedrive\\desktop\\413\\mission11_pierce\\backend\\mission11_pierce\\mission11_pierce\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C0707543-009F-4098-8219-7440275EAB53}|Mission11_Pierce\\Mission11_Pierce.csproj|solutionrelative:mission11_pierce\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C0707543-009F-4098-8219-7440275EAB53}|Mission11_Pierce\\Mission11_Pierce.csproj|c:\\users\\jaxon\\onedrive\\desktop\\413\\mission11_pierce\\backend\\mission11_pierce\\mission11_pierce\\mission11_pierce.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{C0707543-009F-4098-8219-7440275EAB53}|Mission11_Pierce\\Mission11_Pierce.csproj|solutionrelative:mission11_pierce\\mission11_pierce.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C0707543-009F-4098-8219-7440275EAB53}|Mission11_Pierce\\Mission11_Pierce.csproj|c:\\users\\jaxon\\onedrive\\documents\\413\\mission11_pierce\\backend\\mission11_pierce\\mission11_pierce\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{C0707543-009F-4098-8219-7440275EAB53}|Mission11_Pierce\\Mission11_Pierce.csproj|c:\\users\\jaxon\\onedrive\\desktop\\413\\mission11_pierce\\backend\\mission11_pierce\\mission11_pierce\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{C0707543-009F-4098-8219-7440275EAB53}|Mission11_Pierce\\Mission11_Pierce.csproj|solutionrelative:mission11_pierce\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
@@ -34,52 +42,76 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\Jaxon\\OneDrive\\Desktop\\413\\Mission11_Pierce\\backend\\Mission11_Pierce\\Mission11_Pierce\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Mission11_Pierce\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\Jaxon\\OneDrive\\Desktop\\413\\Mission11_Pierce\\backend\\Mission11_Pierce\\Mission11_Pierce\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Mission11_Pierce\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAuwCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T20:30:37.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AdminUser.cs",
+              "DocumentMoniker": "C:\\Users\\Jaxon\\OneDrive\\Desktop\\413\\Mission11_Pierce\\backend\\Mission11_Pierce\\Mission11_Pierce\\AdminUser.cs",
+              "RelativeDocumentMoniker": "Mission11_Pierce\\AdminUser.cs",
+              "ToolTip": "C:\\Users\\Jaxon\\OneDrive\\Desktop\\413\\Mission11_Pierce\\backend\\Mission11_Pierce\\Mission11_Pierce\\AdminUser.cs",
+              "RelativeToolTip": "Mission11_Pierce\\AdminUser.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T16:22:33.36Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "BooksController.cs",
-              "DocumentMoniker": "C:\\Users\\jaxon\\OneDrive\\Documents\\413\\Mission11_Pierce\\backend\\Mission11_Pierce\\Mission11_Pierce\\Controllers\\BooksController.cs",
+              "DocumentMoniker": "C:\\Users\\Jaxon\\OneDrive\\Desktop\\413\\Mission11_Pierce\\backend\\Mission11_Pierce\\Mission11_Pierce\\Controllers\\BooksController.cs",
               "RelativeDocumentMoniker": "Mission11_Pierce\\Controllers\\BooksController.cs",
-              "ToolTip": "C:\\Users\\jaxon\\OneDrive\\Documents\\413\\Mission11_Pierce\\backend\\Mission11_Pierce\\Mission11_Pierce\\Controllers\\BooksController.cs",
+              "ToolTip": "C:\\Users\\Jaxon\\OneDrive\\Desktop\\413\\Mission11_Pierce\\backend\\Mission11_Pierce\\Mission11_Pierce\\Controllers\\BooksController.cs",
               "RelativeToolTip": "Mission11_Pierce\\Controllers\\BooksController.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAADwvzsAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAUwGoAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-22T04:10:42.205Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\jaxon\\OneDrive\\Documents\\413\\Mission11_Pierce\\backend\\Mission11_Pierce\\Mission11_Pierce\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Jaxon\\OneDrive\\Desktop\\413\\Mission11_Pierce\\backend\\Mission11_Pierce\\Mission11_Pierce\\Program.cs",
               "RelativeDocumentMoniker": "Mission11_Pierce\\Program.cs",
-              "ToolTip": "C:\\Users\\jaxon\\OneDrive\\Documents\\413\\Mission11_Pierce\\backend\\Mission11_Pierce\\Mission11_Pierce\\Program.cs",
+              "ToolTip": "C:\\Users\\Jaxon\\OneDrive\\Desktop\\413\\Mission11_Pierce\\backend\\Mission11_Pierce\\Mission11_Pierce\\Program.cs",
               "RelativeToolTip": "Mission11_Pierce\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAUwCwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-22T04:09:13.745Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "BookDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\jaxon\\OneDrive\\Documents\\413\\Mission11_Pierce\\backend\\Mission11_Pierce\\Mission11_Pierce\\Data\\BookDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Jaxon\\OneDrive\\Desktop\\413\\Mission11_Pierce\\backend\\Mission11_Pierce\\Mission11_Pierce\\Data\\BookDbContext.cs",
               "RelativeDocumentMoniker": "Mission11_Pierce\\Data\\BookDbContext.cs",
-              "ToolTip": "C:\\Users\\jaxon\\OneDrive\\Documents\\413\\Mission11_Pierce\\backend\\Mission11_Pierce\\Mission11_Pierce\\Data\\BookDbContext.cs",
+              "ToolTip": "C:\\Users\\Jaxon\\OneDrive\\Desktop\\413\\Mission11_Pierce\\backend\\Mission11_Pierce\\Mission11_Pierce\\Data\\BookDbContext.cs",
               "RelativeToolTip": "Mission11_Pierce\\Data\\BookDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-22T04:05:36.729Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Mission11_Pierce.csproj",
-              "DocumentMoniker": "C:\\Users\\jaxon\\OneDrive\\Documents\\413\\Mission11_Pierce\\backend\\Mission11_Pierce\\Mission11_Pierce\\Mission11_Pierce.csproj",
+              "DocumentMoniker": "C:\\Users\\Jaxon\\OneDrive\\Desktop\\413\\Mission11_Pierce\\backend\\Mission11_Pierce\\Mission11_Pierce\\Mission11_Pierce.csproj",
               "RelativeDocumentMoniker": "Mission11_Pierce\\Mission11_Pierce.csproj",
-              "ToolTip": "C:\\Users\\jaxon\\OneDrive\\Documents\\413\\Mission11_Pierce\\backend\\Mission11_Pierce\\Mission11_Pierce\\Mission11_Pierce.csproj",
+              "ToolTip": "C:\\Users\\Jaxon\\OneDrive\\Desktop\\413\\Mission11_Pierce\\backend\\Mission11_Pierce\\Mission11_Pierce\\Mission11_Pierce.csproj",
               "RelativeToolTip": "Mission11_Pierce\\Mission11_Pierce.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -87,11 +119,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Book.cs",
-              "DocumentMoniker": "C:\\Users\\jaxon\\OneDrive\\Documents\\413\\Mission11_Pierce\\backend\\Mission11_Pierce\\Mission11_Pierce\\Book.cs",
+              "DocumentMoniker": "C:\\Users\\Jaxon\\OneDrive\\Desktop\\413\\Mission11_Pierce\\backend\\Mission11_Pierce\\Mission11_Pierce\\Book.cs",
               "RelativeDocumentMoniker": "Mission11_Pierce\\Book.cs",
-              "ToolTip": "C:\\Users\\jaxon\\OneDrive\\Documents\\413\\Mission11_Pierce\\backend\\Mission11_Pierce\\Mission11_Pierce\\Book.cs",
+              "ToolTip": "C:\\Users\\Jaxon\\OneDrive\\Desktop\\413\\Mission11_Pierce\\backend\\Mission11_Pierce\\Mission11_Pierce\\Book.cs",
               "RelativeToolTip": "Mission11_Pierce\\Book.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -99,11 +131,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\jaxon\\OneDrive\\Documents\\413\\Mission11_Pierce\\backend\\Mission11_Pierce\\Mission11_Pierce\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Jaxon\\OneDrive\\Desktop\\413\\Mission11_Pierce\\backend\\Mission11_Pierce\\Mission11_Pierce\\appsettings.json",
               "RelativeDocumentMoniker": "Mission11_Pierce\\appsettings.json",
-              "ToolTip": "C:\\Users\\jaxon\\OneDrive\\Documents\\413\\Mission11_Pierce\\backend\\Mission11_Pierce\\Mission11_Pierce\\appsettings.json",
+              "ToolTip": "C:\\Users\\Jaxon\\OneDrive\\Desktop\\413\\Mission11_Pierce\\backend\\Mission11_Pierce\\Mission11_Pierce\\appsettings.json",
               "RelativeToolTip": "Mission11_Pierce\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",

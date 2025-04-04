@@ -11,5 +11,7 @@ namespace Mission11_Pierce.Data
         public BookDbContext(DbContextOptions<BookDbContext> options) : base(options) { }
 
         public DbSet<Book> Books { get; set; }
+        public DbSet<AdminUser> AdminUsers { get; set; }
+
     }
 }

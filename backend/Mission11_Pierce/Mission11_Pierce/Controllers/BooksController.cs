@@ -58,6 +58,62 @@ namespace Mission11_Pierce.Controllers
 
             return Ok(categories);
         }
+        [HttpGet("adminusers")]
+        public async Task<ActionResult<IEnumerable<AdminUser>>> GetAdminUsers()
+        {
+            return await _context.AdminUsers.ToListAsync();
+        }
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Book>> GetBookById(int id)
+        {
+            var book = await _context.Books.FindAsync(id);
+            return book == null ? NotFound() : Ok(book);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateBook(int id, [FromBody] Book updatedBook)
+        {
+            if (id != updatedBook.BookId) return BadRequest();
+
+            _context.Entry(updatedBook).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!_context.Books.Any(b => b.BookId == id))
+                    return NotFound();
+                else
+                    throw;
+            }
+
+            return NoContent();
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<Book>> AddBook([FromBody] Book book)
+        {
+            _context.Books.Add(book);
+            await _context.SaveChangesAsync();
+            return CreatedAtAction(nameof(GetBookById), new { id = book.BookId }, book);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteBook(int id)
+        {
+            var book = await _context.Books.FindAsync(id);
+            if (book == null)
+            {
+                return NotFound();
+            }
+
+            _context.Books.Remove(book);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
 
 
     }

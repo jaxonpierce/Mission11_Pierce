@@ -272,6 +272,23 @@ const BookList: React.FC = () => {
           <option value="20">20</option>
         </Form.Control>
       </Form.Group>
+      <Button
+  variant="dark"
+  style={{
+    position: "fixed",
+    bottom: "20px",
+    right: "20px",
+    borderRadius: "50%",
+    width: "60px",
+    height: "60px",
+    fontSize: "0.8rem",
+    zIndex: 1000,
+  }}
+  onClick={() => navigate("/admin")}
+>
+  Admin
+</Button>
+
     </div>
   );
 };
