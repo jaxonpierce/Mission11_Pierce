@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/3cebcb79-8664-4355-94a4-1309509e2112/resourceGroups/appsvc_windows_westus3/providers/Microsoft.Web/sites/Mission13Backend",
+    "appService.deploySubpath": "backend\\Mission11_Pierce\\publish"
+}
