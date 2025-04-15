@@ -1,4 +1,4 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Mission11_Pierce.Data;
 
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
@@ -15,17 +15,18 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<BookDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Add CORS Policy � Only allow requests from React frontend
+// Add CORS Policy — Only allow requests from React frontend
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: MyAllowSpecificOrigins,
         policy =>
         {
-            policy.WithOrigins("http://localhost:5173") // Your React frontend
+            policy.AllowAnyOrigin()
                   .AllowAnyHeader()
                   .AllowAnyMethod();
         });
 });
+
 
 var app = builder.Build();
 
