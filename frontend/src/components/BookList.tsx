@@ -11,6 +11,11 @@ import {
 } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
+const API_BASE = import.meta.env.VITE_API_BASE_URL;
+
+console.log("✅ API_BASE is:", API_BASE);
+
+
 interface Book {
   bookId: number;
   title: string;
@@ -36,7 +41,7 @@ const BookList: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("All Categories");
   const [categories, setCategories] = useState<string[]>([]);
   const [totalRecords, setTotalRecords] = useState(0);
-  const navigate = useNavigate(); // For navigation
+  const navigate = useNavigate();
 
   const [cart, setCart] = useState<CartItem[]>(() => {
     const storedCart = sessionStorage.getItem("cart");
@@ -74,9 +79,14 @@ const BookList: React.FC = () => {
           ...(selectedCategory !== "All Categories" ? { category: selectedCategory } : {}),
         });
 
-        const response = await fetch(`http://localhost:5119/api/books?${queryParams}`);
-        const data = await response.json();
+        const response = await fetch(`${API_BASE}/api/books?${queryParams}`);
 
+        const text = await response.text();
+        console.log("📘 Raw books response:", text);
+
+        if (!response.ok) throw new Error(`HTTP ${response.status}: ${text}`);
+
+        const data = JSON.parse(text);
         setBooks(data.books);
         setTotalRecords(data.totalRecords);
       } catch (error) {
@@ -90,8 +100,13 @@ const BookList: React.FC = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch("http://localhost:5119/api/books/categories");
-        const data = await response.json();
+        const response = await fetch(`${API_BASE}/api/books/categories`);
+        const text = await response.text();
+        console.log("📚 Raw categories response:", text);
+
+        if (!response.ok) throw new Error(`HTTP ${response.status}: ${text}`);
+
+        const data = JSON.parse(text);
         setCategories(["All Categories", ...data]);
       } catch (error) {
         console.error("Error fetching categories:", error);
@@ -130,7 +145,6 @@ const BookList: React.FC = () => {
     <div className="container mt-4">
       <h2 className="mb-3">Book List</h2>
 
-      {/* Bootstrap Toast */}
       <ToastContainer position="top-end" className="p-3">
         <Toast show={showToast} onClose={() => setShowToast(false)}>
           <Toast.Header>
@@ -140,12 +154,10 @@ const BookList: React.FC = () => {
         </Toast>
       </ToastContainer>
 
-      {/* View Cart Button */}
       <Button className="mb-3 me-2" variant="warning" onClick={handleViewCart}>
         View Cart
       </Button>
 
-      {/* Category Filter */}
       <Form.Group controlId="categoryFilter" className="mb-3">
         <Form.Label>Filter by Category:</Form.Label>
         <Form.Control
@@ -164,7 +176,6 @@ const BookList: React.FC = () => {
         </Form.Control>
       </Form.Group>
 
-      {/* Sorting */}
       <Button
         className="btn btn-primary mb-3"
         onClick={() => setSortBy(sortBy === "title" ? "author" : "title")}
@@ -172,7 +183,6 @@ const BookList: React.FC = () => {
         Sort by {sortBy === "title" ? "Author" : "Title"}
       </Button>
 
-      {/* Cart Summary */}
       <div className="mb-4">
         <h4>Cart Summary</h4>
         {cart.length === 0 ? (
@@ -192,7 +202,6 @@ const BookList: React.FC = () => {
         </p>
       </div>
 
-      {/* Book Table */}
       <Table striped bordered hover>
         <thead>
           <tr>
@@ -221,11 +230,7 @@ const BookList: React.FC = () => {
                   placement="top"
                   overlay={<Tooltip id={`tooltip-${book.bookId}`}>Add this book to your cart</Tooltip>}
                 >
-                  <Button
-                    size="sm"
-                    variant="success"
-                    onClick={() => addToCart(book)}
-                  >
+                  <Button size="sm" variant="success" onClick={() => addToCart(book)}>
                     Add to Cart
                   </Button>
                 </OverlayTrigger>
@@ -235,7 +240,6 @@ const BookList: React.FC = () => {
         </tbody>
       </Table>
 
-      {/* Pagination */}
       <Pagination>
         <Pagination.Prev
           disabled={currentPage === 1}
@@ -256,7 +260,6 @@ const BookList: React.FC = () => {
         />
       </Pagination>
 
-      {/* Books per page */}
       <Form.Group controlId="booksPerPage" className="mt-3">
         <Form.Label>Books per page:</Form.Label>
         <Form.Control
@@ -272,23 +275,23 @@ const BookList: React.FC = () => {
           <option value="20">20</option>
         </Form.Control>
       </Form.Group>
-      <Button
-  variant="dark"
-  style={{
-    position: "fixed",
-    bottom: "20px",
-    right: "20px",
-    borderRadius: "50%",
-    width: "60px",
-    height: "60px",
-    fontSize: "0.8rem",
-    zIndex: 1000,
-  }}
-  onClick={() => navigate("/admin")}
->
-  Admin
-</Button>
 
+      <Button
+        variant="dark"
+        style={{
+          position: "fixed",
+          bottom: "20px",
+          right: "20px",
+          borderRadius: "50%",
+          width: "60px",
+          height: "60px",
+          fontSize: "0.8rem",
+          zIndex: 1000,
+        }}
+        onClick={() => navigate("/admin")}
+      >
+        Admin
+      </Button>
     </div>
   );
 };

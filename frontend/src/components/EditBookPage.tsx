@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Form, Button, Container } from "react-bootstrap";
 
+const API_BASE = import.meta.env.VITE_API_BASE_URL;
+
 interface Book {
   bookId: number;
   title: string;
@@ -21,31 +23,42 @@ const EditBookPage: React.FC = () => {
 
   useEffect(() => {
     const fetchBook = async () => {
-      const response = await fetch(`http://localhost:5119/api/books/${id}`);
-      const data = await response.json();
-      setBook(data);
+      try {
+        const response = await fetch(`${API_BASE}/api/books/${id}`);
+        if (!response.ok) throw new Error("Book not found");
+        const data = await response.json();
+        setBook(data);
+      } catch (error) {
+        console.error("Error fetching book:", error);
+        alert("Failed to load book details.");
+      }
     };
     fetchBook();
   }, [id]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setBook((prev) => prev && { ...prev, [name]: value });
+    setBook((prev) => prev && { ...prev, [name]: name === "price" || name === "pageCount" ? Number(value) : value });
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const response = await fetch(`http://localhost:5119/api/books/${id}`, {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(book),
-    });
+    try {
+      const response = await fetch(`${API_BASE}/api/books/${id}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(book),
+      });
 
-    if (response.ok) {
-      alert("Book updated!");
-      navigate("/admin/dashboard");
-    } else {
-      alert("Update failed.");
+      if (response.ok) {
+        alert("Book updated!");
+        navigate("/admin/dashboard");
+      } else {
+        alert("Update failed.");
+      }
+    } catch (error) {
+      console.error("Update error:", error);
+      alert("Something went wrong while updating the book.");
     }
   };
 

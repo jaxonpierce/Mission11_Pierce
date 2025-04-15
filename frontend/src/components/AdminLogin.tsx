@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Button, Form, Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
+const API_BASE = import.meta.env.VITE_API_BASE_URL;
+
 const AdminLogin: React.FC = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -11,7 +13,7 @@ const AdminLogin: React.FC = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5119/api/admin/login", {
+      const response = await fetch(`${API_BASE}/api/admin/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

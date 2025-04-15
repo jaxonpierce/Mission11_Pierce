@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Table, Button, Container, Form, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
+const API_BASE = import.meta.env.VITE_API_BASE_URL;
+
 interface Book {
   bookId: number;
   title: string;
@@ -30,7 +32,7 @@ const AdminPage: React.FC = () => {
 
   const fetchBooks = async () => {
     try {
-      const response = await fetch("http://localhost:5119/api/books?page=1&pageSize=1000");
+      const response = await fetch(`${API_BASE}/api/books?page=1&pageSize=1000`);
       const data = await response.json();
       setBooks(data.books);
     } catch (error) {
@@ -44,16 +46,20 @@ const AdminPage: React.FC = () => {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setNewBook((prev) => ({ ...prev, [name]: name === "price" || name === "pageCount" ? Number(value) : value }));
+    setNewBook((prev) => ({
+      ...prev,
+      [name]: name === "price" || name === "pageCount" ? Number(value) : value,
+    }));
   };
 
   const handleAddBook = async (e: React.FormEvent) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:5119/api/books", {
+    const response = await fetch(`${API_BASE}/api/books`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newBook),
     });
+
     if (response.ok) {
       fetchBooks();
       alert("Book added!");
@@ -76,9 +82,10 @@ const AdminPage: React.FC = () => {
     const confirmed = window.confirm("Are you sure you want to delete this book?");
     if (!confirmed) return;
 
-    const response = await fetch(`http://localhost:5119/api/books/${id}`, {
+    const response = await fetch(`${API_BASE}/api/books/${id}`, {
       method: "DELETE",
     });
+
     if (response.ok) {
       fetchBooks();
       alert("Book deleted!");
@@ -92,7 +99,6 @@ const AdminPage: React.FC = () => {
       <h2>Admin Dashboard</h2>
       <h3>Add a Book</h3>
 
-      {/* Add Book Form */}
       <Form onSubmit={handleAddBook} className="mb-4">
         <Row>
           {Object.entries(newBook).map(([key, value]) => (
@@ -113,9 +119,9 @@ const AdminPage: React.FC = () => {
           Add Book
         </Button>
       </Form>
+
       <h2>List of Books:</h2>
 
-      {/* Book Table */}
       <Table striped bordered hover responsive>
         <thead>
           <tr>
@@ -150,7 +156,11 @@ const AdminPage: React.FC = () => {
                 >
                   Edit
                 </Button>
-                <Button variant="danger" size="sm" onClick={() => handleDelete(book.bookId)}>
+                <Button
+                  variant="danger"
+                  size="sm"
+                  onClick={() => handleDelete(book.bookId)}
+                >
                   Delete
                 </Button>
               </td>
