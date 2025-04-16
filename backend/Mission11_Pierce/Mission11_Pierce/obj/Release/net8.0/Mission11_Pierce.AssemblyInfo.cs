@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mission11_Pierce")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f75362e5bbeebf9e5a2547196954f63be8eb007")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb4512ad79f3ed601c01076d62347c5717b48a49")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mission11_Pierce")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mission11_Pierce")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
