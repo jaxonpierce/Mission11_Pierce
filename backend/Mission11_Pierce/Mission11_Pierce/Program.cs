@@ -1,39 +1,39 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Mission11_Pierce.Data;
 
-var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
-
 var builder = WebApplication.CreateBuilder(args);
+
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Add Database Context
 builder.Services.AddDbContext<BookDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Add CORS Policy — allow local dev and deployed frontend
+// ✅ Updated CORS Policy
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy(name: MyAllowSpecificOrigins,
-        policy =>
-        {
-            policy.WithOrigins(
-                "http://localhost:5173", // for local dev
-                "https://ashy-ocean-00e8d421e.6.azurestaticapps.net" // deployed frontend
+    options.AddPolicy(name: MyAllowSpecificOrigins, policy =>
+    {
+        policy
+            .WithOrigins(
+                "http://localhost:5173",
+                "https://ashy-ocean-00e8d421e.6.azurestaticapps.net"
             )
             .AllowAnyHeader()
-            .AllowAnyMethod();
-        });
+            .AllowAnyMethod()
+            .AllowCredentials(); // 👈 optional: only if you send cookies/tokens
+    });
 });
 
 var app = builder.Build();
 
+// ✅ Apply CORS policy before anything else
 app.UseCors(MyAllowSpecificOrigins);
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -41,11 +41,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
-
-
 app.UseAuthorization();
-
 app.MapControllers();
 
 app.Run();
+
