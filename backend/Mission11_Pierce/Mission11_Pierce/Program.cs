@@ -6,7 +6,6 @@ var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -15,18 +14,20 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<BookDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Add CORS Policy — Only allow requests from React frontend
+// Add CORS Policy — allow local dev and deployed frontend
 builder.Services.AddCors(options =>
 {
     options.AddPolicy(name: MyAllowSpecificOrigins,
         policy =>
         {
-            policy.AllowAnyOrigin()
-                  .AllowAnyHeader()
-                  .AllowAnyMethod();
+            policy.WithOrigins(
+                "http://localhost:5173", // for local dev
+                "https://ashy-ocean-00e8d421e.6.azurestaticapps.net" // deployed frontend
+            )
+            .AllowAnyHeader()
+            .AllowAnyMethod();
         });
 });
-
 
 var app = builder.Build();
 
